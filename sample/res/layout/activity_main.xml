@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.eevoskos.overlayimageview.sample"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity" >
+
+    <com.eevoskos.overlayimageview.OverlayImageView
+        android:id="@+id/image_top_left"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="#ff0000"
+        app:overlay_gravity="top_left"
+        app:overlay_padding="8dp"
+        app:overlay_src="@drawable/ic_overlay" />
+
+    <com.eevoskos.overlayimageview.OverlayImageView
+        android:id="@+id/image_top_right"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="#00ff00"
+        app:overlay_gravity="top_right"
+        app:overlay_padding="8dp"
+        app:overlay_src="@drawable/ic_overlay" />
+
+    <com.eevoskos.overlayimageview.OverlayImageView
+        android:id="@+id/image_center"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerInParent="true"
+        android:src="#aaaaaa"
+        app:overlay_gravity="center"
+        app:overlay_padding="8dp"
+        app:overlay_src="@drawable/ic_overlay" />
+
+    <com.eevoskos.overlayimageview.OverlayImageView
+        android:id="@+id/image_bottom_left"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="#ff00ff"
+        app:overlay_gravity="bottom_left"
+        app:overlay_padding="8dp"
+        app:overlay_src="@drawable/ic_overlay" />
+
+    <com.eevoskos.overlayimageview.OverlayImageView
+        android:id="@+id/image_bottom_right"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="#0000ff"
+        app:overlay_gravity="bottom_right"
+        app:overlay_padding="8dp"
+        app:overlay_src="@drawable/ic_overlay" />
+
+</RelativeLayout>
