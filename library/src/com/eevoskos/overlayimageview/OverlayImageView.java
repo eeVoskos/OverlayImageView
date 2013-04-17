@@ -41,6 +41,7 @@ public class OverlayImageView extends ImageView {
     private float mOverlayHeight;
 
     private boolean mIsPrepared = false;
+    private boolean mShowOverlay = true;
 
     public OverlayImageView(Context context) {
         this(context, null);
@@ -135,9 +136,23 @@ public class OverlayImageView extends ImageView {
         }
 
         // Draw overlay bitmap on top of image
-        if (mOverlayBitmap != null) {
+        if (mShowOverlay && mOverlayBitmap != null) {
             canvas.drawBitmap(mOverlayBitmap, null, mBounds, mPaint);
         }
+    }
+    
+    public void showOverlay() {
+        mShowOverlay = true;
+        //postInvalidate();
+    }
+    
+    public void hideOverlay() {
+        mShowOverlay = false;
+        //postInvalidate();
+    }
+    
+    public void setShowOverlay(boolean show) {
+        mShowOverlay = show;
     }
 
 }
