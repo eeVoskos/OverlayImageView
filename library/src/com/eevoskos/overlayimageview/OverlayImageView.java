@@ -77,10 +77,12 @@ public class OverlayImageView extends ImageView {
 
     public void setOverlayBitmap(Bitmap bitmap) {
         this.mOverlayBitmap = bitmap;
+        postInvalidate();
     }
 
     public void setOverlayResource(int resource) {
         this.mOverlayBitmap = BitmapFactory.decodeResource(getResources(), resource);
+        postInvalidate();
     }
 
     private void prepare() {
@@ -143,16 +145,23 @@ public class OverlayImageView extends ImageView {
     
     public void showOverlay() {
         mShowOverlay = true;
-        //postInvalidate();
+        postInvalidate();
     }
     
     public void hideOverlay() {
         mShowOverlay = false;
-        //postInvalidate();
+        postInvalidate();
     }
     
     public void setShowOverlay(boolean show) {
         mShowOverlay = show;
+        postInvalidate();
+    }
+    
+    public void setOverlayGravity(Gravity gravity) {
+        this.mOverlayGravity = gravity;
+        mIsPrepared = false;
+        postInvalidate();
     }
 
 }
