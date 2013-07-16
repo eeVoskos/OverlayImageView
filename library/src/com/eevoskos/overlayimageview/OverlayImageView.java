@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 public class OverlayImageView extends ImageView {
 
-    private enum Gravity {
+    public enum Gravity {
         center(0), top_left(1), top_right(2), bottom_left(3), bottom_right(4);
 
         public final int value;
